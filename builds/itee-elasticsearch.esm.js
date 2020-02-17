@@ -1,4 +1,4 @@
-console.log('Itee.Database.ElasticSearch v1.0.0 - EsModule')
+console.log('Itee.Database.ElasticSearch v1.0.1 - EsModule')
 import * as ElasticSearchDriver from 'elasticsearch';
 import { isNull, isUndefined, isString } from 'itee-validators';
 import path from 'path';
@@ -6,7 +6,7 @@ import { kStringMaxLength } from 'buffer';
 import fs from 'fs';
 import { Writable } from 'stream';
 
-console.log('Itee.Database v8.0.0 - EsModule');
+console.log('Itee.Database v8.0.2 - EsModule');
 
 /**
  * @author [Tristan Valcke]{@link https://github.com/Itee}
@@ -268,7 +268,6 @@ class TAbstractFileConverter {
         const fileReadStream = fs.createReadStream( file );
 
         fileReadStream.on( 'error', ( error ) => {
-            console.error( `Read stream on error: ${error}` );
 
             isOnError = true;
             onError( error );
