@@ -48,9 +48,9 @@ class TElasticSearchDatabase extends TAbstractDatabase {
             }
         } ).then( function ( response ) {
             var hits = response.hits.hits
-            console.log( hits )
+            this.logger.log( hits )
         }, function ( error ) {
-            console.trace( error.message )
+            this.logger.trace( error.message )
         } )
 
     }
