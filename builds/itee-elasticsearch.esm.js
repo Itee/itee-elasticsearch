@@ -1,4 +1,4 @@
-console.log('Itee.Database.ElasticSearch v1.0.2 - EsModule')
+console.log('Itee.Database.ElasticSearch v1.0.3 - EsModule')
 import * as ElasticSearchDriver from 'elasticsearch';
 import { TAbstractDatabase } from 'itee-database';
 
