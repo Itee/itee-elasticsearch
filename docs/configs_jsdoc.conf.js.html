@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-	<title>Itee-ElasticSearch Module: Config-Karma-Units</title>
+	<title>Itee-ElasticSearch Source: configs/jsdoc.conf.js</title>
 
 	<!--[if lt IE 9]>
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -67,256 +67,99 @@
 <div class="row">
 
 	
-	<div class="col-md-8">
+	<div class="col-md-12">
 	
 		<div id="main">
 			
 
-	<h1 class="page-title">Module: Config-Karma-Units</h1>
+		<h1 class="page-title">Source: configs/jsdoc.conf.js</h1>
+    
 <section>
-
-<header>
-    
-</header>
-
-
-<article>
-    <div class="container-overview">
-    
-        
-            <div class="description">The file manage the karma configuration for run units tests that are under `tests/units` folder</div>
-        
-
-        
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-	<dt class="tag-author method-doc-label method-doc-details-label">Author:</dt>
-	<dd class="tag-author">
-		<ul>
-			<li><a href="https://github.com/Itee">Tristan Valcke</a></li>
-			</ul>
-	</dd>
-	
-
-	
-
-	
-	<dt class="tag-license method-doc-label method-doc-details-label">License:</dt>
-	<dd class="tag-license">
-		<ul class="dummy">
-			<li><a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a></li>
-		</ul>
-	</dd>
-	
-
-	
-
-
-
-	
-	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
-	<dd class="tag-source">
-		<ul class="dummy">
-			<li>
-				<a href="configs_karma.units.conf.js.html">configs/karma.units.conf.js</a>,
-				 <a href="configs_karma.units.conf.js.html#sunlight-1-line-1">line 1</a>
-			</li>
-		</ul>
-	</dd>
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-        
-    
-    </div>
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-        <h3 class="subsection-title">Methods</h3>
-
-        <dl>
-            
-<hr>
-<dt>
-    <h4 class="name" id="~CreateKarmaUnitsConfiguration"><span class="type-signature">&lt;generator, inner> </span>CreateKarmaUnitsConfiguration(config)</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        Will assign an appropriate configuration object about unit tests for karma.
-    </div>
-    
-
-    
-
-    
-
-    
-    
-        <h5>Parameters:</h5>
-        
-
-<table class="params table table-striped">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>config</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">object</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">The karma configuration object to extend</td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
-	<dd class="tag-source">
-		<ul class="dummy">
-			<li>
-				<a href="configs_karma.units.conf.js.html">configs/karma.units.conf.js</a>,
-				 <a href="configs_karma.units.conf.js.html#sunlight-1-line-17">line 17</a>
-			</li>
-		</ul>
-	</dd>
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dd>
-
-        </dl>
-    
-
-    
-
-    
-</article>
-
+    <article>
+        <pre
+            class="sunlight-highlight-javascript linenums">/**
+ * @author [Tristan Valcke]{@link https://github.com/Itee}
+ * @license [BSD-3-Clause]{@link https://opensource.org/licenses/BSD-3-Clause}
+ *
+ * @module Config-JsDoc
+ * @description The configuration file of the jsdoc plugin
+ */
+
+/**
+ * Will create an appropriate configuration object for jsdoc
+ *
+ * @generator
+ * @returns {object} The jsdoc configuration
+ */
+function CreateJsdocConfiguration () {
+
+    return {
+        tags: {
+            allowUnknownTags: false,
+            dictionaries:     [ 'jsdoc', 'closure' ]
+        },
+        source: {
+            include:        [ 'README.md' ],
+            includePattern: '.+\\.js(doc|x)?$',
+            excludePattern: '(node_modules|docs|builds|tests)',
+            exclude:        []
+        },
+        sourceType:   'module',
+        plugins:      [],
+        recurseDepth: 5,
+        opts:         {
+            access:      'all',
+            debug:       false,
+            encoding:    'utf8',
+            destination: 'docs',
+            recurse:     true,
+            verbose:     true,
+            private:     true
+        },
+        templates: {
+            cleverLinks:    false,
+            monospaceLinks: false,
+            navType:        'inline',
+            theme:          [
+                                   'cerulean',
+                                   'cosmo',
+                                   'darkly',
+                                   'cyborg',
+                                   'flatly',
+                                   'journal',
+                                   'lumen',
+                                   'paper',
+                                   'readable',
+                                   'sandstone',
+                                   'simplex',
+                                   'slate',
+                                   'spacelab',
+                                   'superhero',
+                                   'united',
+                                   'yeti'
+                               ][ 3 ],
+            syntaxTheme:       'dark',
+            linenums:          true,
+            collapseSymbols:   false,
+            sort:              'longname, version, since',
+            search:            true,
+            systemName:        'Itee-ElasticSearch',
+            footer:            '',
+            copyright:         'Copyright 2015-Present &lt;a href="https://github.com/Itee">Itee&lt;/a> (Tristan Valcke)',
+            includeDate:       false,
+            inverseNav:        false,
+            outputSourceFiles: true,
+            outputSourcePath:  true
+        }
+    }
+
+}
+
+module.exports = CreateJsdocConfiguration()
+</pre>
+    </article>
 </section>
+
 
 
 
@@ -326,10 +169,6 @@
 
 	<div class="clearfix"></div>
 
-	
-		<div class="col-md-3">
-			<div id="toc" class="col-md-3 hidden-xs hidden-sm hidden-md"></div>
-		</div>
 	
 
 </div>

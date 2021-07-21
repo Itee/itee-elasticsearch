@@ -1,3 +1,10 @@
+## [1.0.3](https://github.com/Itee/itee-elasticsearch/compare/v1.0.2...v1.0.3) (2021-07-21)
+
+
+### Bug Fixes
+
+* **readme:** add simple readme content ([8a1e8c4](https://github.com/Itee/itee-elasticsearch/commit/8a1e8c42ce992c6b18183adee084c4da7d97523c))
+
 ## [1.0.2](https://github.com/Itee/itee-elasticsearch/compare/v1.0.1...v1.0.2) (2021-07-08)
 
 
